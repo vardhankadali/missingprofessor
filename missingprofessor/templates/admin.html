@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="vh-100" style="background-color: rgba(199, 199, 199, 0.911);">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="container">
+          <div class="card text-black" style="background-color: rgb(0,0,0);
+          background-color: rgba(248, 248, 248, 0.822);">
+            <div class="card-body p-5 text-center">
+                <h1>Current progress of all registered players</h1>
+                <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th class="th-lg" scope="col">Username</th>
+                        <th class="th-lg" scope="col">Email</th>
+                        <th class="th-lg" scope="col">Ending reached</th>
+                        <th class="th-lg" scope="col">Deadends reached</th>
+                        <th class="th-lg" scope="col">Lab Password wrong attempts</th>
+                        <th class="th-lg" scope="col">Factory PIN wrong attempts</th>
+                        <th class="th-lg" scope="col">Mansion Visited</th>
+                        <th class="th-lg" scope="col">Warehouse Visited</th>
+                        <th class="th-lg" scope="col">Picked up House key</th>
+                        <th class="th-lg" scope="col">Opened Diary</th>
+                        <th class="th-lg" scope="col">Audio recording</th>
+                        <th class="th-lg" scope="col">Picture of dog</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in users %}
+                      <tr>
+                        <th scope="row">{{user.username}}</th>
+                        <td>{{user.email}}</td>
+                        {% if user.endingreached == True %}
+                        <td>Yes</td>
+                        {% else %}
+                        <td>No</td>
+                        {% endif %}
+                        <td>{{user.deadendsmet}}</td>
+                        <td>{{user.labkeywrong}}</td>
+                        <td>{{user.factorykeywrong}}</td>
+                        {% if user.mansion == True %}
+                        <td>Yes</td>
+                        {% else %}
+                        <td>No</td>
+                        {% endif %}
+                        {% if user.warehouse == True %}
+                        <td>Yes</td>
+                        {% else %}
+                        <td>No</td>
+                        {% endif %}
+                        {% if user.housekey == True %}
+                        <td>Yes</td>
+                        {% else %}
+                        <td>No</td>
+                        {% endif %}
+                        {% if user.diary == True %}
+                        <td>Yes</td>
+                        {% else %}
+                        <td>No</td>
+                        {% endif %}
+                        {% if user.labaudio == True %}
+                        <td>Yes</td>
+                        {% else %}
+                        <td>No</td>
+                        {% endif %}
+                        {% if user.dogpic == True %}
+                        <td>Yes</td>
+                        {% else %}
+                        <td>No</td>
+                        {% endif %}
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+{% endblock %}

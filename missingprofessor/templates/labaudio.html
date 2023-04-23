@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="vh-100 bg-image" 
+style="background-image: url('/static/lab.jpg');
+        background-repeat: no-repeat;
+        height: 100%; 
+        background-position: center;
+        background-size: cover;">
+    <div class="container py-5 h-100">
+      <div class="d-flex justify-content-center mt-4">
+        <audio id="myAudio">
+            <source src="{{url_for('static', filename='audio.mp3')}}" type="audio/mpeg">
+        </audio>
+        <button id="playAudio"><img src="{{url_for('static', filename='audiorecord.gif')}}" width="222" 
+            height="251" alt="audio recording"></button>
+        
+      </div>
+      <div class="d-flex justify-content-center mt-4">
+        <h2>Click on the audio waves to Play/Pause</h2>
+        
+    </div>
+    <div class="d-flex justify-content-center mt-4">
+        <h3>(There are only 3 places which are 10 minutes away from here. It should be one of them.)</h3>
+        
+    </div>
+      <div class="d-flex justify-content-center mt-4">
+        
+        <form action="{{url_for('lab')}}" method="get">
+            <input class="btn btn-danger btn-lg" type="submit" value="STOP LISTENING">
+        </form>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+
+ 
+
+<!-- <p> </p>
+<form action="{{url_for('lab')}}" method="get">
+    <input class="btn btn-primary" type="submit" value="GO BACK">
+</form>
+<p> </p>
+<audio id="myAudio">
+    <source src="{{url_for('static', filename='audio.mp3')}}" type="audio/mpeg">
+</audio>
+
+<button id="playAudio">Play</button> -->
+<!-- <button onclick="playAudio()" type="button">Play Audio</button>
+<button onclick="pauseAudio()" type="button">Pause Audio</button>  -->

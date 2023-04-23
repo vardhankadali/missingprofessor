@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="vh-100 bg-image" 
+style="background-image: url('/static/lablock.jpg');
+        background-repeat: no-repeat;
+        filter: blur(8px);
+        -webkit-filter: blur(0px);
+        height: 100%; 
+        background-position: center;
+        background-size: cover;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card text-black" style="background-color: rgb(0,0,0);
+          background-color: rgba(0, 174, 255, 0.815);">
+            <div class="card-body p-5 text-center">
+                <h1>LABORATORY</h1>
+                <h3>Password Hint: What is my dog's name?</h3>
+                <form method="POST" action="">
+                    {{ form.hidden_tag() }}
+                    <div class="form-group">
+                        {% if form.answer.errors %}
+                            {{ form.answer(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.answer.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.answer(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-outline-danger btn-lg mt-4") }}
+                    </div>
+                </form>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+            <form action="{{url_for('map')}}" method="get">
+                <input class="btn btn-info btn-lg" type="submit" value="GO TO MAP">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+
+
+<!-- <h1>LAB LOCKED</h1>
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.answer.label(class="form-control-label") }}
+        {% if form.answer.errors %}
+            {{ form.answer(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.answer.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}
+            {{ form.answer(class="form-control form-control-lg") }}
+        {% endif %}
+    </div>
+    <div class="form-group">
+        {{ form.submit(class="btn btn-outline-primary") }}
+    </div>
+</form> -->

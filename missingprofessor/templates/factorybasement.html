@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="vh-100 bg-image" 
+style="background-image: url('/static/factorybasement.jpg');
+        background-repeat: no-repeat;
+        filter: blur(8px);
+        -webkit-filter: blur(0px);
+        height: 100%; 
+        background-position: center;
+        background-size: cover;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="container">
+          <div class="card text-black" style="background-color: rgb(0,0,0);
+          background-color: rgba(175, 175, 175, 0.815);">
+            <div class="card-body p-5 text-center">
+                <h1>Factory basement</h1>
+                <h3>You found the professor! But she seems to be having an asthma exacerbation. Give her the correct medication you saw at the pharmacy.</h3>
+                <form action="{{url_for('failed')}}" method="get">
+                    <input class="btn btn-warning btn-lg mt-4" type="submit" value="CISPLATIN">
+                </form>
+                <form action="{{url_for('failed')}}" method="get">
+                    <input class="btn btn-warning btn-lg mt-4" type="submit" value="PROAMATINE">
+                </form>
+
+                <form action="{{url_for('success')}}" method="post">
+                    <input class="btn btn-warning btn-lg mt-4" type="submit" value="FLUTICASONE">
+                </form>
+                <form action="{{url_for('failed')}}" method="get">
+                    <input class="btn btn-warning btn-lg mt-4" type="submit" value="ABACAVIR">
+                </form>
+                
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+            <form action="{{url_for('map')}}" method="get">
+                <input class="btn btn-danger btn-lg" type="submit" value="GO TO MAP">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+
+<!-- <h1>FACTORY BASEMENT</h1>
+
+<p> </p>
+<form action="{{url_for('failed')}}" method="get">
+    <input class="btn btn-primary" type="submit" value="MED 1">
+</form>
+<p> </p>
+<form action="{{url_for('failed')}}" method="get">
+    <input class="btn btn-primary" type="submit" value="MED 2">
+</form>
+<p> </p>
+<form action="{{url_for('success')}}" method="post">
+    <input class="btn btn-primary" type="submit" value="MED 3">
+</form>
+<p> </p>
+<form action="{{url_for('failed')}}" method="get">
+    <input class="btn btn-primary" type="submit" value="MED 4">
+</form>
+<p> </p>
+<form action="{{url_for('map')}}" method="get">
+    <input class="btn btn-primary" type="submit" value="MAP">
+</form> -->

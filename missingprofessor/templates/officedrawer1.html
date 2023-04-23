@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="vh-100 bg-image" 
+style="background-image: url('/static/bg5.jpg');
+        background-repeat: no-repeat;
+        height: 100%; 
+        background-position: center;
+        background-size: cover;">
+    <div class="container py-5 h-100">
+      <div class="d-flex justify-content-center mt-4">
+        <h1>The drawer is empty</h1>
+      </div>
+      <div class="d-flex justify-content-center mt-4">
+        <form action="{{url_for('office')}}" method="get">
+            <input class="btn btn-info btn-lg" type="submit" value="CLOSE DRAWER">
+        </form>
+      </div>
+    </div>
+  </section>
+  {% endblock %}

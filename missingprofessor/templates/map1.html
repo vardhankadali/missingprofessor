@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="vh-100 bg-image" 
+style="background-image: url('/static/bg3.jpg');
+        background-repeat: no-repeat;
+        height: 100%; 
+        background-position: center;
+        background-size: cover;">
+    <div class="container py-5 h-100">
+      <div class="d-flex justify-content-center mt-4">
+        <img src="{{url_for('static', filename='map1.jpg')}}" width="800" 
+        height="530" alt="Workplace" usemap="#map" style="border: 8px solid rgb(0, 0, 0);">
+
+        <map name="map">
+        <area shape="rect" coords="96,25,218,175" alt="Pharmacy" href="{{ url_for('pharmacy') }}">
+        <area shape="rect" coords="256,110,380,257" alt="House" href="{{ url_for('house') }}">
+        <area shape="rect" coords="140,311,262,460" alt="Office" href="{{ url_for('office') }}">
+        <area shape="rect" coords="342,358,460,503" alt="Laboratory" href="{{ url_for('lab') }}">
+        </map>
+      </div>
+    </div>
+  </section>
+
+
+
+
+{% endblock %}

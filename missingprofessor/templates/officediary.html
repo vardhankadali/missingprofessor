@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="vh-100 bg-image" 
+style="background-image: url('/static/bg7.jpg');
+        background-repeat: no-repeat;
+        height: 100%; 
+        background-position: center;
+        background-size: cover;">
+    <div class="container py-5 h-100">
+      <div class="d-flex justify-content-center mt-4">
+        <img src="{{url_for('static', filename='diary.jpg')}}" width="520" 
+        height="520" alt="Diary" style="border: 8px solid rgb(0, 0, 0);">
+
+      </div>
+      <div class="d-flex justify-content-center mt-4">
+        <form action="{{url_for('office')}}" method="get">
+            <input class="btn btn-info btn-lg" type="submit" value="CLOSE DIARY">
+        </form>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
