@@ -4,10 +4,13 @@
 
 A treasure hunt-like game where the player must decode and solve puzzles in order to save a missing professor before it's too late.
 
-![codeblock](/images/home.jpg)
-<!-- TOC -->
-# Table of contents
+![](/images/home.jpg)
 
+# Table of Contents
+<!-- TOC -->
+
+- [Missing Professor](#missing-professor)
+- [Table of Contents](#table-of-contents)
 - [Steps to set up the Project](#steps-to-set-up-the-project)
 - [Soft Skils Being Assessed](#soft-skils-being-assessed)
 - [Detailed Walkthrough](#detailed-walkthrough)
@@ -22,6 +25,7 @@ A treasure hunt-like game where the player must decode and solve puzzles in orde
     - [Factory Basement](#factory-basement)
     - [The Final Escape](#the-final-escape)
 - [Additional Features](#additional-features)
+- [Contact](#contact)
 
 <!-- /TOC -->
 
@@ -153,4 +157,9 @@ A treasure hunt-like game where the player must decode and solve puzzles in orde
 ![](/images/admin1.jpg)
 ![](/images/admin2.jpg)
 
+# Contact
+
+Gmail - vardhankadali54@gmail.com
+
+Project link -  https://github.com/vardhankadali/missingprofessor
 
