@@ -9,8 +9,6 @@ A treasure hunt-like game where the player must decode and solve puzzles in orde
 # Table of Contents
 <!-- TOC -->
 
-- [Missing Professor](#missing-professor)
-- [Table of Contents](#table-of-contents)
 - [Steps to set up the Project](#steps-to-set-up-the-project)
 - [Soft Skils Being Assessed](#soft-skils-being-assessed)
 - [Detailed Walkthrough](#detailed-walkthrough)
