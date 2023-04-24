@@ -28,7 +28,7 @@ A treasure hunt-like game where the player must decode and solve puzzles in orde
 <!-- /TOC -->
 
 # Steps to set up the Project
-- You can directly open and start playing the game by following this link. https://missingprofessor.onrender.com
+- You can directly open and start playing the game by following this link. https://missingprofessor.onrender.com (Known issue : As it is a free deployment, the server stops running after 15 minutes of inactivity. So the first user to open the link after some inactivity often faces a long reload time. The server needs some time to spin back up, so please wait for a while if the page doesn't load instantly.)
 - If you wish to do this project on your own, setting it up and modifying is simple. Download the files or clone this repository to your laptop or desktop.
 
 ` git clone https://github.com/vardhankadali/missingprofessor.git `
